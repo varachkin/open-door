@@ -1,0 +1,123 @@
+
+
+.card-btn-info {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
+    font-size: 2.25rem;
+    z-index: 11;
+    /*color: #1B42A6;*/
+    color: var(--main-color);
+    opacity: 0.8;
+    background-color: aliceblue;
+    border-radius: 50%;
+    line-height: 0;
+}
+
+.card-box-number {
+    position: absolute;
+    font-size: 1.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    min-height: 2rem;
+    z-index: 12;
+    left: 0.5rem;
+    top: 0.5rem;
+    opacity: 0.9;
+    border-radius: 50%;
+    padding: 0.25rem;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    font-weight: 800;
+    color: var(--main-color);
+    background: var(--success-button-bgcolor);
+    color: rgb(255, 255, 255);
+    font-weight: 900;
+    opacity: 0;
+}
+
+.card-box-number.exist {
+    animation: add-produt 0.7s forwards;
+    animation-delay: 0.35s;
+}
+
+.card-control-block {
+    width: 100%;
+}
+
+.swiper-card-description-block {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: rgba(0, 0, 0, 0.575);
+    width: 100%;
+    /*text-align: center;*/
+}
+
+.card-description-block .card-name {
+    margin: 0.35rem 0;
+}
+
+.card-description-block .card-description {
+    text-align: start;
+    line-height: 1.75rem;
+    padding: 0.5rem 0;
+    opacity: 0.7;
+}
+
+.card-price-block {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.25rem;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-family: Russo, san-serif;
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+}
+
+.card-price-block .current-price{
+    font-size: 1.75rem;
+}
+.card-price-block .old-price{
+    font-size: 1rem;
+}
+
+@keyframes add-produt {
+    0%{
+        transform: scale(4);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 0.9;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    .card-box-number {
+        position: absolute;
+        font-size: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        aspect-ratio: 1/1;
+        min-height: 2vh;
+        z-index: 12;
+        left: 0.5rem;
+        top: 0.5rem;
+        opacity: 0.9;
+        border-radius: 50%;
+        padding: 0.25rem;
+        border: 1px solid rgba(0, 0, 0, 0.384);
+        font-weight: 800;
+        color: var(--main-color);
+        background: var(--success-button-bgcolor);
+        color: rgb(255, 255, 255);
+        font-weight: 900;
+        opacity: 0;
+    }
+}

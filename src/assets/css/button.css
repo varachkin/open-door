@@ -1,0 +1,144 @@
+:root {
+  --timer-value: 9s;
+}
+
+.button{
+    font-size: 2.25vh;
+    padding: 1rem 2rem;
+    margin: 0.5rem 0;
+    /*background: linear-gradient(90deg, #1B42A6, #223669);*/
+    background: var(--button-background);
+    color:black;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 30px 25px -18px rgba(5, 5, 5, 0.788);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem
+}
+.button.disabled{
+  background: linear-gradient(90deg, #777777, #272727);
+  color: #dfdfdf;
+  opacity: 0.4;
+  box-shadow: none;
+}
+
+.button.disabled:active{
+  box-shadow: none;
+}
+.button.light{
+    background: linear-gradient(90deg, #dfdfdf, #cecece);
+    /*color:#1B42A6;*/
+    color: var(--main-color);
+}
+
+.button.warning{
+  background: linear-gradient(90deg, #ffa939, #d48012);
+  color:#e4e4e4;
+}
+
+.button:active{
+    transition: 0.2s;
+    box-shadow: 0px 18px 25px -18px rgba(5, 5, 5, 0.788);
+}
+
+#countdown {
+    position: relative;
+    margin: auto;
+    /* height: 150%; */
+    width: 3.25vh;
+    aspect-ratio: 1/1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #countdown-number {
+    color: #1B42A6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 4vw;
+    font-weight: 800;
+      letter-spacing: 0px;
+  }
+  
+  #countdown svg {
+    transform: scale(0.75);
+    position: absolute;
+    top: -75%;
+    right: -75%;
+    width: 250%; /* Adjusted to use vw */
+   aspect-ratio: 1/1;
+    transform: rotateY(-180deg) rotateZ(-90deg) scale(0.5);
+  }
+  
+  svg circle {
+    stroke-dasharray: 250%; /* Adjusted to use vw */
+    stroke-dashoffset: 0vw; /* Adjusted to use vw */
+    stroke-linecap: round;
+    stroke-width: 0.75vw; /* Adjusted to use vw */
+    fill: none;
+    animation: countdown var(--timer-value) linear forwards;
+  }
+  
+  @keyframes countdown {
+    from {
+      stroke-dashoffset: 0vw; /* Adjusted to use vw */
+    }
+    to {
+      stroke-dashoffset: 250%; /* Adjusted to use vw */
+    }
+  }
+
+  .button.success, .button.success svg circle, .button.success #countdown-number{
+    color: #229843;
+    stroke: #229843;
+  }
+
+  .button.default, .button.default svg circle, .button.default #countdown-number{
+    color: var(--main-color);
+    stroke: var(--main-color);
+  }
+
+  .button.error, .button.error svg circle, .button.error #countdown-number{
+    color: #CE3A31;
+    stroke:#CE3A31;
+  }
+
+  button.button.submit{
+    background: linear-gradient(90deg, #00a862, #0f8654);
+  }
+  button.button.cancel{
+    background: linear-gradient(90deg, rgb(211, 0, 0), rgb(151, 4, 4));
+  }
+  .button-wrapper{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+
+  @media only screen and (max-width: 768px) {
+
+    
+    .button {
+      font-size: 4vw;
+      line-height: 5vw;
+      padding: 1vh 2vh;
+      margin: 0.5vh 0;
+      /* background: linear-gradient(90deg, #1B42A6, #223669); */
+      background: var(--button-background);
+      color: black;
+      border: none;
+      border-radius: 0.5rem;
+      box-shadow: 0px 30px 25px -18px rgba(5, 5, 5, 0.788);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3vw;
+  }
+  }

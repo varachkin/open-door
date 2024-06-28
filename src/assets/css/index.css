@@ -1,0 +1,190 @@
+div.notistack-Snackbar #notistack-snackbar,
+div.notistack-Snackbar #notistack-snackbar svg {
+    font-size: 1.5rem !important;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: local('Poppins'), url(../fonts/Poppins-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Russo';
+    src: local('Russo'), url(../fonts/RussoOne-Regular.ttf) format('truetype');
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    font-family: Poppins, sans-serif;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+#root,
+body,
+html {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.page {
+    max-height: 100vh;
+    height: calc(100vh - 8vh);
+    overflow: hidden;
+    background-size: cover;
+}
+
+.btn {
+    border-radius: 0.5rem;
+}
+
+:root {
+    --background: linear-gradient(45deg, #131313 55%, #49470e 77%, #232900 90%);
+    /* --background-main: radial-gradient(circle at 165%, rgb(4, 2, 29), rgb(9, 27, 85) 65%, #afaeaea4 75%, rgb(9, 33, 110) 78%);  */
+    --background-main: url(./../img/bg-exa-img.jpeg);
+    --background-service: radial-gradient(circle at 165%, rgb(232, 240, 255), rgb(246, 245, 255) 65%, rgb(120, 174, 255) 75%, rgb(240, 241, 255) 78%);
+    /* --background-extra: url(./../img/stars.png); */
+    --background-extra: none;
+    --button-background: radial-gradient(circle at 10% 10%, #ffbd30, #d39000);
+    --error-gradient: linear-gradient(45deg, #330505, #ff5353, #330505);
+    --warning-gradient: linear-gradient(45deg, #332805, #dda63f, #332805);
+    --success-gradient: linear-gradient(45deg, #053318, #0a8328, #053314);
+    --default-gradient: linear-gradient(45deg, #010a2e, #0c1647, #183a84, #020241);
+    --default-gradient-radial: radial-gradient(#1b2e75, #102754, #0e2558 150%);
+    --main-color: #131313;
+    --secondary-color: #e0e0e0;
+    --success-button-bgcolor: radial-gradient(#1dd44b, #0a8328);
+    --third-color: #cac24b;
+    --third-color-opacity: #b9b6822f;
+    --logo-start-screen: url(/src/assets/img/logoEXAwhite.png);
+    --logo-header: url(/src/assets/img/logo-exa-white-small.png);
+    --logo-full: url(/src/assets/img/exa-logo-white.png);
+    --logo-full-black: url(/src/assets/img/exa-logo-black.png);
+    --service-background-extra: url(/src/assets/img/service-background.webp);
+    --service-background-extra-gateway: url(/src/assets/img/bg-exa-img.jpeg);
+}

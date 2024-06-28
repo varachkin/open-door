@@ -1,0 +1,175 @@
+.react-tabs {
+    height: 92%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.react-tabs__tab-list {
+    font-size: 2vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.react-tabs__tab {
+    max-width: 33%;
+    text-align: center;
+    padding: 0.75rem;
+}
+
+.react-tabs__tab--selected {
+    background-color: rgba(4, 0, 255, 0.144);
+}
+.react-tabs__tab-panel{
+    flex: 1;
+}
+.terminal-settings-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+    gap: 3rem;
+}
+
+input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+    margin: 0;
+}
+
+.swich-wrapper label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 9vw;
+    height: 4.75vw;
+    background: rgb(211, 0, 0);
+    display: block;
+    border-radius: 100px;
+    position: relative;
+}
+
+.swich-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw;
+}
+
+.swich-wrapper span {
+    margin: 1rem;
+    font-size: 5vw;
+    color: rgba(0, 0, 0, 0.418);
+}
+
+.swich-wrapper>input:checked~span.active-on {
+    color: #00a862;
+    font-weight: 900;
+}
+
+span.active-off {
+    color: #a80000;
+    font-weight: 900;
+}
+
+.swich-wrapper input:checked~span.active-off {
+    color: rgba(90, 0, 192, 0.418);
+    font-weight: 600;
+}
+
+
+
+.swich-wrapper label:after {
+    content: '';
+    position: absolute;
+    top: 0.25vw;
+    left: 0.5vw;
+    width: 4vw;
+    height: 4vw;
+    background: #fff;
+    border-radius: 4rem;
+    transition: 0.3s;
+}
+
+.swich-wrapper input:checked+label {
+    background: #00a862;
+}
+
+.swich-wrapper input:checked+label:after {
+    left: calc(100% - 0.5vw);
+    transform: translateX(-100%);
+}
+
+.swich-wrapper label:active:after {
+    width: 7vw;
+}
+
+.radio-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+label.terminal-settings-radio {
+    font-size: 2.25vh;
+    display: flex;
+    align-items: center;
+}
+
+label.terminal-settings-radio>input[type='radio'] {
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    margin: 0 1rem 0 0; 
+}
+
+.products-settings-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+.products-settings-content{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+}
+.products-settings-grid-control{
+    display: flex;
+    justify-content: space-between;
+}
+.products-settings-grid-control label{
+   font-size: 1.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   text-align: center;
+   align-items: center;
+}
+.products-settings-grid-control input{
+    max-width: 90%;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.square-grid-table {
+    border-collapse: collapse;
+  }
+  
+  .cell {
+    width: 100%;
+    /* min-height: 150px; */
+    border: 1px solid #222222;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+  }

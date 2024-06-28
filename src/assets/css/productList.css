@@ -1,0 +1,110 @@
+:root{
+
+}
+.products-list{
+    width: 70vw !important;
+    padding: 2rem;
+
+}
+.products-list h4{
+    padding: 0.5rem;
+
+}
+.status-product-list-row{
+    width: 100% !important;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    overflow: hidden;
+}
+
+.status-product-list-row .o-circle {
+    color: rgba(240, 248, 255, 0.767);
+    display: flex;
+    width: 2.555rem;
+    height: 2.555rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    animation: circle-appearance .8s ease-in-out 1 forwards, set-overflow .1s 1.1s forwards;
+    box-shadow: 3px 42px 57px -1px rgba(45, 45, 45, 1);
+    font-size: 2rem;
+  }
+  .status-product-list-row .c-container__circle {
+    margin: 0.75rem 2rem  0.75rem  0rem;
+    aspect-ratio: 1/1;
+  }
+  .status-product-list-row .c-container__circle .o-circle__sign::after,
+  .status-product-list-row .c-container__circle .o-circle__sign::before {
+    display: none;
+  }
+
+.status-product-list-row {
+    display:flex;
+    overflow:hidden;
+    white-space:nowrap;
+    position: relative;
+    align-items: center;
+}
+.status-product-list-row .o-circle{
+    position: relative;
+    z-index: 2;
+}
+
+/*.status-product-list-value span:first-of-type {    !* For increasing performance*/
+/*                       ID/Class should've been used.*/
+/*                       For a small demo*/
+/*                       it's okaish for now *!*/
+/*    animation: showup 7s infinite;*/
+/*    animation-delay: 7s;*/
+/*}*/
+
+.status-product-list-value {
+    /*width:0px;*/
+    /*animation: reveal 7s infinite;*/
+    display: inline-flex;
+    /* width: 100%; */
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 60vw;
+}
+
+.status-product-list-row .status-product-list-value span:first-child {
+    opacity: 0;
+    animation: slidein 4s;
+    animation-fill-mode:forwards;
+    font-size: 1.5rem;
+    overflow: hidden;
+    width: 65%;
+    
+
+}
+.status-product-list-row .status-product-list-value span:last-child{
+    width: 25%;
+    font-size: 1.5rem;
+}
+    
+
+/*@keyframes showup {*/
+/*    0% {opacity:0;}*/
+/*    20% {opacity:1;}*/
+/*    80% {opacity:1;}*/
+/*    100% {opacity:0;}*/
+/*}*/
+
+@keyframes slidein {
+    0% { margin-left:-800px; opacity: 0}
+    20% { margin-left:-800px; opacity: 0.2}
+    35% { margin-left:0px; opacity: 0.8}
+    100% { margin-left:0px; opacity: 1}
+}
+
+/*@keyframes reveal {*/
+/*    0% {opacity:0;width:0px;}*/
+/*    20% {opacity:1;width:0px;}*/
+/*    30% {width:355px;}*/
+/*    80% {opacity:1;}*/
+/*    100% {opacity:0;width:355px;}*/
+/*}*/

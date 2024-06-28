@@ -1,0 +1,104 @@
+.swipe {
+    position: absolute;
+    bottom: 5rem;
+    left: 45%;
+    opacity: 1;
+    transform: scale(2);
+    visibility: hidden;
+    animation: hide-finger 7s forwards;
+    animation-delay: 2s;
+}
+
+.path {
+    width: 0.5rem;
+    height: 0.5rem;
+    position: absolute;
+    background: linear-gradient(90deg, #ffffff 20%, #fff01b00);
+    border-radius: 40px;
+    top: 28px;
+    left: 30vw;
+    visibility: hidden;
+    opacity: 0.5;
+    animation: swipe-dot 2s infinite;
+    animation-iteration-count: 3;
+    animation-delay: 3.47s;
+}
+
+.hand-icon {
+    position: relative;
+    background-image: url('/src/assets/img/hand.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 100px;
+    animation: swipe-hand 2s infinite;
+    animation-delay: 3s;
+    transform-origin: 52% 62%;
+    transform: matrix(0.3);
+}
+
+@keyframes swipe-hand {
+    25% {
+        transform: translate(10vw) rotate(30deg);
+    }
+
+    50% {
+        transform: translate(-30vw) rotate(-15deg);
+    }
+
+    100% {
+        transform: translate(0px) rotate(0);
+    }
+}
+
+@keyframes swipe-dot {
+    12% {
+        visibility: visible;
+        width: 40vw;
+    }
+
+    25% {
+        visibility: visible;
+        transform: translate(-50vw);
+        width: 20px;
+    }
+
+    26% {
+        visibility: hidden;
+    }
+}
+
+@keyframes hide-finger {
+    0% {
+        opacity: 0;
+        visibility: visible;
+    }
+    15% {
+        opacity: 0.6;
+    }
+
+    85% {
+        opacity: 0.6;
+    }
+    97% {
+        opacity: 0.6;
+    }
+    100% {
+        visibility: hidden;
+        display: none;
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .swipe {
+        position: absolute;
+        bottom: 11vh;
+        left: 45%;
+        opacity: 0.6;
+        transform: scale(1);
+        visibility: hidden;
+        animation: hide-finger 7s forwards;
+        animation-delay: 2s;
+    }
+}

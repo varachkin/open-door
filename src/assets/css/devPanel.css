@@ -1,0 +1,58 @@
+:root{
+    --start-position: -5rem;
+}
+
+
+.dev-panel-wrapper{
+    position: absolute;
+    z-index: 9999999999;
+    bottom: 5rem;
+    padding: 2rem 2rem 2rem 0;
+    background-color: rgba(240, 248, 255, 0.322);
+    border-radius: 0 4rem 4rem 0;
+    left: var(--start-position);
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgb(230, 230, 230);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: .5s;
+}
+
+.dev-panel-wrapper div{
+    flex: 1;
+    text-align: center;
+    font-size: 3rem;
+}
+.dev-panel-wrapper div span{
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.dev-panel-wrapper span{
+    font-size: 3rem;
+}
+
+.show{
+    left: 0;
+}
+
+/* @keyframes show{
+    0%{
+        left: var(--start-position);
+    }
+    100%{
+        left: 0,
+    }
+}
+
+@keyframes hide{
+    0%{
+        left: var(--start-position);
+    }
+    100%{
+        left: 0,
+    }
+} */
