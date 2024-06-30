@@ -1,16 +1,21 @@
-import './../../assets/css/box.scss'
+import {useState} from "react";
 
-export const Box = () => {
+export const Box = ({children}) => {
+    const [isOpen, setIsOpen] = useState(false)
+
+    const handleOpen = () => {
+        setIsOpen(prev => !prev)
+    }
+
     return (
-        <div className="cube purple">
-            <div className="cube__inner">
-                <div className="cube__side front"></div>
-                <div className="cube__side back"></div>
-                <div className="cube__side top"></div>
-                <div className="cube__side bottom"></div>
-                <div className="cube__side left"></div>
-                <div className="cube__side right"></div>
+        <div className="backDoor">
+            <div
+                className={`door ${isOpen ? 'doorOpen' : ''}`}
+                onClick={handleOpen}
+            >
+                {children}
             </div>
         </div>
+
     )
 }

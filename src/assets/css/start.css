@@ -13,7 +13,7 @@
     font-size: 4rem;
 }
 
-.start-page-container div:first-child, .start-page-container div:last-child {
+.start-page-container > div:first-child, .start-page-container > div:last-child {
     height: 15vh;
 }
 
@@ -193,7 +193,7 @@
         background-image: var(--logo-start-screen);
         background-position: center;
         background-repeat: no-repeat;
-        background-size: contain;
+        background-size: cover;
         margin: 3vh auto;
         position: relative;
     }
