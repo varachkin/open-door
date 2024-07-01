@@ -1,7 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     language: 'pl',
-    serial: null,
+    // serial: null,
+    serial: 'CLK01-999-99-98',
     isCheckingTechBreak: false,
     technical_break: false,
     devMode: false,

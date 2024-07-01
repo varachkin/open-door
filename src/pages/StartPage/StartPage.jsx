@@ -6,7 +6,6 @@ import {useLoginUpdate} from "./../../contexts/LoginContext";
 import {useDispatch, useSelector} from "react-redux";
 import {PiHandTapFill} from "react-icons/pi";
 import {locales} from "../../locales";
-import {getSerial, getTechBreak} from "../../API";
 import {setCheckingTechnicalBreak, setSerialOfMachine, setTechBreak} from "../../features/actions/actionsSlice";
 import useSnack from "../../hooks/useSnack";
 import Loader from '../../components/Client/Loader/Loader';
@@ -34,7 +33,7 @@ export default function StartPage() {
             >
                 <div className="start-page-logo"></div>
                 <div className='box-wrapper'>
-                    {boxes.map(box => <Box>{box}</Box>)}
+                    {boxes.map(box => <Box key={box} box={box}>{box}</Box>)}
                 </div>
 
                 <div className="title">{locales[language].START_PAGE.TITLE}</div>
